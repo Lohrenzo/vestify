@@ -12,6 +12,8 @@ import Home from '../pages/Home';
 import About from '../pages/About';
 import Plans from '../pages/Plans';
 import Contact from '../pages/Contact';
+import SignUp from '../pages/SignUp';
+import Login from '../pages/Login';
 
 
 export default function Nav() {
@@ -31,7 +33,7 @@ export default function Nav() {
         <>
             <nav className="flex items-center lg:justify-around justify-between lg:px-0 px-[1.2rem] py-[1.8rem] lg:border-b-2 lg:shadow lg:shadow-[#028CCA] overflow-x-hidden fixed bg-[#06091D] inset-x-0 top-0" >
                 <Link to='/' title='Home' className="cursor-pointer items-center justify-center">
-                    <h2 className='logo duration-200 hover:text-[#028CCA] text-[#ffffff] font-bold text-[35px]'>Vestify</h2>
+                    <h2 className='logo duration-200 hover:text-[#028CCA] text-[#ffffff] font-bold lg:text-[35px] text-[25px]'>Vestify</h2>
                 </Link>
                 <button onClick={ToggleNav} className='p-[8px] transition hover:scale-125 duration-400 border-0 lg:hidden inline focus:outline-none bg-transparent'>
                     {open == false ? <MenuIcon sx={{ fontSize: "2.4rem"}} /> : <CloseIcon sx={{ fontSize: "2.4rem"}} />}
@@ -56,7 +58,7 @@ export default function Nav() {
                     </ul>
                     <div className="flex justify-between item-center gap-x-3">
                         {/* <NavLink to="/sign-in" title='Sign In' className="btn-white">Sign In</NavLink> */}
-                        <NavLink to="/sign-up" title='Get Started' className="btn-sky-outline">Get Started</NavLink>
+                        <Link to="/sign-up" title='Get Started' activeclass="not-active" className="btn-sky-outline">Get Started</Link>
                     </div>
                 </div>
             </nav>
@@ -81,7 +83,7 @@ export default function Nav() {
                     </ul>
                     <div className="flex justify-between item-center gap-x-3">
                         {/* <NavLink to="/sign-in" title='Sign In' className="btn-white">Sign In</NavLink> */}
-                        <NavLink to="/sign-up" title='Get Started' className="btn-sky-outline">Get Started</NavLink>
+                        <Link to="/sign-up" title='Get Started' activeclass="not-active" className="btn-sky-outline">Get Started</Link>
                     </div>
                 </div>
                 :
@@ -104,8 +106,8 @@ export default function Nav() {
                         </NavLink>
                     </ul>
                     <div className="flex justify-between item-center gap-x-3">
-                        {/* <NavLink to="/sign-in" title='Sign In' className="btn-white">Sign In</NavLink> */}
-                        <NavLink to="/sign-up" title='Get Started' className="btn-sky-outline">Get Started</NavLink>
+                        {/* <NavLink to="/login" title='Sign In' className="btn-white">Sign In</NavLink> */}
+                        <Link to="/sign-up" title='Get Started' activeclass="not-active" className="btn-sky-outline">Get Started</Link>
                     </div>
                 </div>
             }
@@ -116,6 +118,8 @@ export default function Nav() {
                 <Route path='/about' element={ <About /> }></Route>
                 <Route path='/plans' element={ <Plans /> }></Route>
                 <Route path='/contact-us' element={ <Contact /> }></Route>
+                <Route path='/sign-up' element={ <SignUp /> }></Route>
+                <Route path='/login' element={ <Login /> }></Route>
             </Routes>
         </>
     );

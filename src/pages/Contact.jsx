@@ -71,7 +71,7 @@ const Contact = () => {
                 <input type='number' name='phone' placeholder='Phone Number' className='bg-transparent p-3 border-2 placeholder:text-black focus:border-accent focus:outline-none transition-all'/>
                 <textarea required name="message" placeholder='Enter A Message *' className='bg-transparent p-3 rounded-b-lg border-2 placeholder:text-black focus:border-accent focus:outline-none transition-all'></textarea>
                 <div className='text-center lg:text-right mb-32'>
-                  <input type="submit" value="Send Message" className='btn btn-sky cursor-pointer' />
+                  <input type="submit" value="Send Message" className='btn-sky-outline cursor-pointer' />
                 </div>
               </div>
             </form>

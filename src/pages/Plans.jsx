@@ -13,8 +13,8 @@ export default function Plans() {
             <section className='h-[100vh] w-full bg-[#ffffff] text-[#000000] flex items-center justify-center'>
                 <div className="grid lg:mt-[4rem] grid-cols-1 lg:grid-cols-2 items-center">
                     <div className='lg:ps-[10rem] lg:text-[3rem] text-[2.8rem]'>
-                        <h2 className='mb-5 text-[#028CCA] lg:text-left text-center capitalize'>Simple, Affordable and Profitable Plans For You</h2>
-                        <p className='text-[1.2rem] lg:text-justify text-center lg:px-0 px-3'>
+                        <h2 className='mb-5 text-[#028CCA] lg:text-left text-center lg:px-0 px-5 capitalize'>Simple, Affordable and Profitable Plans For You</h2>
+                        <p className='text-[1.2rem] lg:text-justify text-center lg:px-0 px-5'>
                             We are here to help Investors earn huge profit with their capital. Our Motive is to help and build our investor's with Confidence. Our name is synonymous with effective and profitable crypto trading solutions and investments.
                         </p>
                     </div>

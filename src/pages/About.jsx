@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 
 // Images
-import bgImg from "../assets/img/street-statistics.jpg";
+// import bgImg from "../assets/img/street-statistics.jpg";
 import imgSimple from "../assets/img/87.jpg";
 import imgSimple2 from "../assets/img/94.jpg";
 import imgPlans from "../assets/img/trade-blackwhite.jpg";
@@ -14,8 +14,8 @@ import Counter from "../components/Counter";
 const About = () => {
     return (
         <div>
-            <section className='banner flex'>
-                <img className='bg-img' src={bgImg} alt="Background Image" />
+            <section className='banner banner-about flex'>
+                {/* <img className='bg-img' src={bgImg} alt="Background Image" /> */}
                 <div className="grid lg:mt-[4rem] mt-[-2rem] px-5 grid-cols-1 lg:grid-cols-1 items-center">
                     <div className='lg:px-[15rem] lg:text-justify text-center text-[3.2rem]'>
                         <h2 className='mb-5 capitalize'>About us</h2>

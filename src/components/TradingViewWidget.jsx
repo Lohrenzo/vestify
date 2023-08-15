@@ -72,7 +72,7 @@ function TradingViewWidget() {
     );
 
     return (
-        <section className='flex justify-center items-center h-[58vh] w-[100%] overflow-hidden'>
+        <section className='flex justify-center items-center lg:h-[68vh] h-[58vh] w-[100%] overflow-hidden'>
             <div className="tradingview-widget-container" ref={container}>
                 <div className="tradingview-widget-container__widget"></div>
                 <div className="tradingview-widget-copyright bg-white"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span className="text-black opacity-40">Track all markets on TradingView</span></a></div>

@@ -183,6 +183,14 @@ nav {
   background-attachment: scroll;
 }
 
+.banner-about {
+  background: linear-gradient(45deg, #06091db3, #020206e1), url("./assets/img/street-statistics.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+}
+
 .btn-white {
   border-radius: 3px;
   color: #06091D;
@@ -243,6 +251,8 @@ nav {
     transform: scale3d(1.1, 1.1, 1.1);
   }
 }
+
+
 
 @media screen and (max-width: 1024px) {
   body {
