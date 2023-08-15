@@ -39,11 +39,11 @@ const SignUp = () => {
                     <div className="grid grid-cols-1 gap-3 text-black w-full">
                         <small className='pt-6 text-[#06091D] opacity-50 text-xs'>All fields with <span className='text-[1.3rem]'>*</span> are required.</small>
                         <input required type="text" name='username' placeholder='Username *' className='bg-transparent p-3 rounded-t-lg border-2 placeholder:text-black focus:border-accent focus:outline-none transition-all'/>
-                        <input required type="text" name='name' placeholder='Full Name *' className='bg-transparent p-3 rounded-t-lg border-2 placeholder:text-black focus:border-accent focus:outline-none transition-all'/>
+                        <input required type="text" name='name' placeholder='Full Name *' className='bg-transparent p-3 border-2 placeholder:text-black focus:border-accent focus:outline-none transition-all'/>
                         <input required type="email" name='email' placeholder='Email Address *' className='bg-transparent p-3 border-2 placeholder:text-black focus:border-accent focus:outline-none transition-all'/>
                         <input type='number' name='phone' placeholder='Phone Number' className='bg-transparent p-3 border-2 placeholder:text-black focus:border-accent focus:outline-none transition-all'/>
                         <input required type='password' name='password' placeholder='Password *' className='bg-transparent p-3 border-2 placeholder:text-black focus:border-accent focus:outline-none transition-all'/>
-                        <input required type='password' name='password2' placeholder='Confirm Password *' className='bg-transparent p-3 border-2 placeholder:text-black focus:border-accent focus:outline-none transition-all'/>
+                        <input required type='password' name='password2' placeholder='Confirm Password *' className='bg-transparent p-3 rounded-b-lg border-2 placeholder:text-black focus:border-accent focus:outline-none transition-all'/>
                         <div className="flex flex-row gap-x-3">
                             <input type="checkbox" className='checkbox' name="terms-conds" id="t&c" />
                             <a href="" className='text-black hover:text-black transition duration-200 hover:opacity-50'>I Accept the Terms And Privacy Policy</a>
