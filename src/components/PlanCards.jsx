@@ -20,7 +20,7 @@ const cardData = [
 
 const PlanCards = () => {
     return (
-        <section className="py-[4rem] lg:px-[12rem] bg-[#ffffff]">
+        <section className="lg:py-[4rem] lg:px-[12rem] bg-[#ffffff]">
             <div className="grid grid-cols-1 lg:grid-cols-3 text-center">
                 {...cardData.map((data, index) => {
                     const {name, priceRange, features} = data;
@@ -29,7 +29,7 @@ const PlanCards = () => {
                             <p className="text-[1.4rem] mb-3 px-[3rem]">{name}</p>
                             <p className="font-bold bg-[#028CCA] px-[3rem] py-2 text-white text-[1.8rem]">{priceRange}</p>
                             <div className="px-[3rem]">
-                                {features.map((feature, index) => {
+                                {features.map((feature) => {
                                     return (
                                         <div className="flex flex-row py-3 text-left">
                                             <p className="w-[2rem]">

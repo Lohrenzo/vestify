@@ -2,8 +2,8 @@ import { Routes, Route, NavLink, Link } from 'react-router-dom';
 
 export default function Footer() {
     return (
-        <section className="section pt-[5rem] px-2 bg-[#06091D]">
-            <div className='flex justify-center gap-y-5 gap-x-5 lg:flex-nowrap lg:flex-row flex-col lg:px-[10rem] px-[4rem] lg:mb-[3rem] mb-[2rem]'>
+        <section className="section pt-[5rem] lg:px-2 bg-[#06091D]">
+            <div className='flex justify-center gap-y-5 gap-x-5 lg:flex-nowrap lg:flex-row flex-col lg:px-[10rem] px-[2rem] lg:mb-[3rem] mb-[2rem]'>
                 <div className='lg:w-[40%]'>
                     <p className='text-center lg:text-left'>
                         <Link to='/' title='Home' className="cursor-pointer text-white duration-200 hover:text-[#028CCA]">

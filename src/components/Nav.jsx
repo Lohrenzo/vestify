@@ -29,9 +29,9 @@ export default function Nav() {
 
     return (
         <>
-            <nav className="flex items-center lg:justify-around justify-between lg:px-0 sm:px-[2rem] py-[1.8rem] lg:border-b-2 lg:shadow lg:shadow-[#028CCA] overflow-x-hidden fixed bg-[#06091D] inset-x-0 top-0" >
+            <nav className="flex items-center lg:justify-around justify-between lg:px-0 px-[1.2rem] py-[1.8rem] lg:border-b-2 lg:shadow lg:shadow-[#028CCA] overflow-x-hidden fixed bg-[#06091D] inset-x-0 top-0" >
                 <Link to='/' title='Home' className="cursor-pointer items-center justify-center">
-                    <h2 className='logo duration-200 text-[#028CCA] hover:text-[#ffffff] font-bold text-[35px]'>Vestify</h2>
+                    <h2 className='logo duration-200 hover:text-[#028CCA] text-[#ffffff] font-bold text-[35px]'>Vestify</h2>
                 </Link>
                 <button onClick={ToggleNav} className='p-[8px] transition hover:scale-125 duration-400 border-0 lg:hidden inline focus:outline-none bg-transparent'>
                     {open == false ? <MenuIcon sx={{ fontSize: "2.4rem"}} /> : <CloseIcon sx={{ fontSize: "2.4rem"}} />}

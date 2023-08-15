@@ -15,8 +15,8 @@ const About = () => {
     return (
         <div>
             <section className='banner flex'>
-                <img className='bg-img absolute top-0 right-0 w-[100rem] h-[100vh]' src={bgImg} alt="Background Image" />
-                <div className="grid lg:mt-[4rem] mt-[10rem] px-5 grid-cols-1 lg:grid-cols-1 items-center">
+                <img className='bg-img' src={bgImg} alt="Background Image" />
+                <div className="grid lg:mt-[4rem] mt-[-2rem] px-5 grid-cols-1 lg:grid-cols-1 items-center">
                     <div className='lg:px-[15rem] lg:text-justify text-center text-[3.2rem]'>
                         <h2 className='mb-5 capitalize'>About us</h2>
                         <p className='text-[1rem]'>

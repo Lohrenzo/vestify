@@ -1,6 +1,7 @@
 // Components
 import Nav from './components/Nav';
 import Footer from './components/Footer';
+import GoToTop from './GoToTop';
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     <>
       <Nav />
       <Footer />
+      <GoToTop />
     </>
   )
 }

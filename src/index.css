@@ -157,16 +157,29 @@ nav {
   height: 100vh;
   width: 100%;
   align-items: center;
+  justify-content: center;
 }
 
 .banner>img {
+  position: absolute;
+  top: 0;
   z-index: -5;
   mix-blend-mode: soft-light;
+  width: 100rem;
+  height: 100vh;
 }
 
 .bg-img {
   object-fit: cover;
   object-position: center;
+}
+
+.home-banner {
+  background: linear-gradient(45deg, #06091d26, #020206), url("./assets/img/btc.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
 }
 
 .btn-white {
@@ -237,7 +250,7 @@ nav {
 
   .navbar {
     position: fixed;
-    width: 100%;
+    width: 80%;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
@@ -245,7 +258,7 @@ nav {
     background-color: #06091D;
     /* left: -1000px; */
     padding: 2rem;
-    transition: 0.8s;
+    transition: 0.5s;
     z-index: 10;
   }
 
