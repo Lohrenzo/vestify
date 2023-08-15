@@ -1,0 +1,275 @@
+/* @import "react-slideshow-image/dist/styles.css"; */
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  font-family: 'Kanit', Inter, system-ui, Cambria, Cochin, sans-serif;
+  /* font-family: 'Share Tech Mono', Cambria, Cochin, monospace; */
+  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgb(255, 255, 255);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+/* *::-webkit-scrollbar-track-piece {
+  background: transparent;
+} */
+
+*::-webkit-scrollbar-track {
+  background: #06091D;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #028CCA;
+  outline: 1px solid #028CCA;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #2E64BD;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}  
+a:hover {
+  color: #535bf2;
+}  
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+p {
+  opacity: 0.8;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #2E64BD;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* @media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
+
+/* Nav */
+nav {
+  position: relative;
+  /* top: 2rem !important; */
+  z-index: 10;
+}
+
+/* .logo:hover {
+  text-shadow: 0 1px 3px #535bf2;
+  transform: scale3d(1.2, 1.1, 1.1);
+} */
+
+.nav-link {
+  font-family: 'Share Tech Mono', Cambria, Cochin, monospace;
+  cursor: pointer;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 800;
+  transition: all ease 0.3s;
+}
+.nav-link:hover {
+  transform: scale(1.2, 1.2);
+  color: #ffffff;
+}
+
+.active::before {
+  transition: all ease 0.2s;
+  content: "";
+  height: 3px;
+  width: 3rem;
+  border-radius: 3px;
+  position: absolute;
+  bottom: -3px;
+  background-color: #ffffff;
+  margin: 10px auto 0 auto;
+  /* box-shadow: 0 0 2px #2E64BD; */
+}
+.active:hover::before {
+  width: 0;
+  /* background-color: #06091D; */
+}
+
+/* Banner */
+.banner {
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+}
+
+.banner>img {
+  z-index: -5;
+  mix-blend-mode: soft-light;
+}
+
+.bg-img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.btn-white {
+  border-radius: 3px;
+  color: #06091D;
+  border: 1px solid #ffffff;
+  transition: all ease 0.5s;
+  background: #ffffff;
+  padding: 10px 25px;
+}
+.btn-white:hover {
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.btn-sky{
+  border-radius: 3px;
+  color: #ffffff;
+  border: 1px solid #028CCA;
+  transition: all ease 0.5s;
+  background: #028CCA;
+  padding: 10px 25px;
+}
+.btn-sky:hover {
+  color: #028CCA;
+  background: transparent;
+  /* border: 1px solid #028CCA; */
+}
+
+.btn-sky-outline {
+  border-radius: 3px;
+  border: 1px solid #028CCA;
+  color: #028CCA;
+  padding: 10px 25px;
+  background: transparent;
+  transition: all ease 0.5s;
+}
+.btn-sky-outline:hover {
+  color: #ffffff;
+  background: #028CCA;
+}
+
+.why-us {
+  background: linear-gradient(45deg, #000000b2, #000000ae), 
+  url("./assets/img/binance.png")
+  ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.blow {
+  transition: all ease 0.3s;
+  animation: blowup 5s infinite;
+}
+@keyframes blowup {
+  50% {
+    /* transform: translateY(1rem); */
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    overflow-x: hidden !important;
+  }
+
+  .navbar {
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    top: 100px;
+    background-color: #06091D;
+    /* left: -1000px; */
+    padding: 2rem;
+    transition: 0.8s;
+    z-index: 10;
+  }
+
+  .navLink {
+  font-family: 'Share Tech Mono', Cambria, Cochin, monospace;
+  align-items: center;
+    justify-content: left;
+    color: #ffffff;
+  }
+
+  .navLink:hover {
+    color: #ffffff;
+  }
+  
+  .active {
+    /* text-decoration: 2px underline; */
+    color: #028CCA;
+  }
+  /* .active:hover {
+    transform: scale(1.2, 1.2);
+  } */
+
+  .active::before {
+    width: 0;
+  }
+  
+}
