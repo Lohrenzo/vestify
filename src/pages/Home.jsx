@@ -15,6 +15,9 @@ import CreditScoreRoundedIcon from '@mui/icons-material/CreditScoreRounded';
 {/* <a href="https://www.freepik.com/free-photo/street-statistics-debt-loss-globe_1150263.htm#query=trading%20charts&position=30&from_view=search&track=ais">Image by jcomp</a> on Freepik */}
 
 // Components
+import Nav from '../components/Nav';
+import Footer from '../components/Footer';
+import GoToTop from '../GoToTop';
 import TradingViewWidget from '../components/TradingViewWidget';
 import Testimonials from '../components/Testimonials';
 import Swipe from '../components/Swipe';
@@ -27,20 +30,20 @@ import WhyUs from '../components/WhyUs';
 export default function Home() {
     return (
         <div className=''>
+            <Nav />
             <section className='banner home-banner flex'>
                 <div className="grid px-5 grid-cols-1 lg:grid-cols-1 items-center">
                     <div className='lg:text-left text-center lg:w-[50%] w-[100%] text-[3.2rem]'>
                         <h2 className='mb-5'>Creating wealth through trading assets online.</h2>
                         <p className='lg:text-[1rem] text-[1.2rem]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam voluptatibus consectetur iste esse vero non quaerat, quisquam libero, voluptatum odit tenetur.</p>
                     </div>
-                    {/* <div className='flex justfy-center lg:ms-[10rem] lg:block hidden'><img src={imgIntro} className='h-[30rem] rounded-md ' alt="" /></div> */}
                 </div>
             </section>
             <WhyUs />
+                    {/* Image by <a href="https://www.freepik.com/free-vector/isometric-cryptocurrency-concept-with-phone_19962849.htm#query=cryptocurrency&position=25&from_view=search&track=sph">Freepik</a> */}
             <section className="offer bg-[#06091D]">
                 <div className="flex gap-x-[3rem] lg:flex-nowrap flex-wrap-reverse py-[5rem] lg:px-[15rem]">
                     <img src={imgSimple} className='w-[400px] lg:mx-0 mx-auto object-contain' alt="" />
-                    {/* Image by <a href="https://www.freepik.com/free-vector/isometric-cryptocurrency-concept-with-phone_19962849.htm#query=cryptocurrency&position=25&from_view=search&track=sph">Freepik</a> */}
                     <div className='flex flex-col lg:ms-[100px] mx-5 mb-5 justify-center'>
                         <h2 className='lg:text-[3.4rem] text-[2.6rem] mb-5'>Simple</h2>
                         <p className='text-[20px] text-justify mb-[35px]'>Investing in bitcoin shouldn't be complicated. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates explicabo earum cumque numquam ex culpa dolor nobis ipsam.</p>
@@ -58,10 +61,10 @@ export default function Home() {
                         </div>
                     </div>
                     <img src={imgSimple2} className='w-[400px] lg:mx-0 mx-auto object-contain' alt="" />
-                    {/* Image by <a href="https://www.freepik.com/free-vector/isometric-cryptocurrency-concept-with-phone_19962849.htm#query=cryptocurrency&position=25&from_view=search&track=sph">Freepik</a> */}
                 </div>
-                {/* <a href="https://www.freepik.com/free-vector/popular-cryptocurrency-logos-set_23678052.htm#query=cryptocurrency&position=0&from_view=keyword&track=sph">Image by myriammira</a> on Freepik */}
             </section>
+                    {/* Image by <a href="https://www.freepik.com/free-vector/isometric-cryptocurrency-concept-with-phone_19962849.htm#query=cryptocurrency&position=25&from_view=search&track=sph">Freepik</a> */}
+                {/* <a href="https://www.freepik.com/free-vector/popular-cryptocurrency-logos-set_23678052.htm#query=cryptocurrency&position=0&from_view=keyword&track=sph">Image by myriammira</a> on Freepik */}
             <section className="plans-home bg-[#ffffff]">
                 <div className="flex gap-x-[3rem] text-[#000000] lg:flex-nowrap lg:flex-row flex-col-reverse py-[5rem] px-4 lg:px-[15rem]">
                     <img src={imgPlans} className='w-[500px] lg:inline hidden lg:mx-0 mx-auto object-cover rounded-xl shadow-lg shadow-black' alt="" />
@@ -115,11 +118,11 @@ export default function Home() {
                 </div>
             </section>
             <TradingViewWidget />
-            {/* <Widget /> */}
             <Testimonials />
-            {/* <Swipe /> */}
             <Counter />
             <FAQs />
+            <Footer />
+            <GoToTop />
         </div>
     );
 };

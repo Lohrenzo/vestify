@@ -7,6 +7,9 @@ import imgSimple2 from "../assets/img/94.jpg";
 import imgPlans from "../assets/img/trade-blackwhite.jpg";
 
 // Components
+import Nav from '../components/Nav';
+import Footer from '../components/Footer';
+import GoToTop from '../GoToTop';
 import Partners from "../components/Partners";
 import WhyUs from "../components/WhyUs";
 import Counter from "../components/Counter";
@@ -14,6 +17,7 @@ import Counter from "../components/Counter";
 const About = () => {
     return (
         <div>
+            <Nav />
             <section className='banner banner-about flex'>
                 {/* <img className='bg-img' src={bgImg} alt="Background Image" /> */}
                 <div className="grid lg:mt-[4rem] mt-[-2rem] px-5 grid-cols-1 lg:grid-cols-1 items-center">
@@ -67,6 +71,8 @@ const About = () => {
                     </div>
                 </div>
             </section>
+            <Footer />
+            <GoToTop />
         </div>
     );
 }

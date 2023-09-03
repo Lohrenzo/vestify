@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import SimpleImageSlider from "react-simple-image-slider";
+// import SimpleImageSlider from "react-simple-image-slider";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 // Images
@@ -31,74 +31,55 @@ export default function testimonials() {
     ];
 
     const [index, setIndex] = useState(0);
-    const length = slides.length;
     
     function handleNext() {
-        if (index < (length - 1)) {
-            setIndex(index + 1);
-        }
-        else if (index == (length - 1)) {
-            setIndex(0);
+        if (index < (slides.length - 1)) {
+            setIndex((prevIndex) => (prevIndex + 1));
+            console.log("Next pressed");
+        } else {
+            setIndex(slides.length - 1);
+            console.log("Next ended");
         }
     }
 
-    function handlePrevious() {
-        if (index != 0) {
-            // if (index <= (length - 1) || index == 1) {
-            setIndex(index - 1);
-        }
-        else if (index == 0) {
-            setIndex(length - 1);
+    const handlePrevious = () => {
+        if (index == 0) {
+            setIndex(0);
+            console.log("Previous ended")
+        } 
+        else {
+            setIndex((prevIndex) => (prevIndex - 1));
+            console.log("Previous pressed")
         }
     }
 
     useEffect(() => {
         const interval = setInterval(() => {
+            setIndex((prevIndex) => (prevIndex + 1) % slides.length);
+          console.log(index);
+        }, 3000);
 
-            if (index != (length - 1)) {
-                setIndex(index + 1);
-            }
-            // else if (index == (length - 1)) {
-            //     setIndex(0);
-            // }
-            else {
-                setIndex(index == 0);
-            }
-            // setIndex(
-            //     index + 1
-            // );
-        }, 2000);
         return () => clearInterval(interval);
-    }, [])
-
-    let slide = slides[index];
+    }, [index]);  
+    
+    const slide = slides[index];
 
     return (
-        <section className="testimonials py-[45px] bg-[white] text-black px-3">
-            <h3 className="text-center mb-[2rem] text-[2.2rem] lg:text-[2.6rem]">What Our Clients Are Saying</h3>
+        <section className="testimonials py-[45px] bg-[white] text-black w-[100vw] overflow-x-hidden px-[1px] lg:px-3">
+            <h3 className="text-center mb-[2rem] text-[1.7rem] lg:text-[2.4rem]">What Our Clients Are Saying</h3>
             <div className='flex justify-center items-center'>
                 <button className="flex justify-center items-center rounded-full bg-[transparent] border-0 focus:outline-none" onClick={handlePrevious}><ArrowBackIosIcon /></button>
-                <div className="flex justify-center items-center rounded-lg border shadow-xl text-center h-[200px] w-[400px]">
-                    <img className="rounded-l-lg w-[150px] h-[200px] object-cover" src={slide.url} alt="Customer Picture" />
-                    <div className="rounded-r-lg p-2 w-[250px] flex flex-col h-[200px] items-center overflow-y-auto">
-                        <p>{slide.testimony}</p>
-                        <h3 className="font-bold">{slide.name}</h3>
-                        <small className="underline">{slide.role}</small>
+                {/* {slides.map((slide, index) => ( */}
+                    <div className={`show-active flex justify-center items-center rounded-lg border shadow-xl text-center h-[150px] lg:h-[200px] w-[400px]`}>
+                        <img className="rounded-l-lg w-[40%] h-[150px] lg:w-[150px] lg:h-[200px] object-cover" src={slide.url} alt={`${slide.name} Picture`} />
+                        <div className="rounded-r-lg p-2 flex flex-col w-[60%] h-[150px] lg:w-[250px] lg:h-[200px] items-center overflow-y-auto">
+                            <p className="lg:text-[1rem] text-[0.6rem]">{slide.testimony}</p>
+                            <h3 className="font-bold lg:text-[1rem] text-[0.6rem]">{slide.name}</h3>
+                            <small className="underline lg:text-[1rem] text-[0.5rem]">{slide.role}</small>
+                        </div>
                     </div>
-                </div>
+                {/* ))} */}
                 <button className="flex justify-center items-center rounded-full bg-[transparent] border-0 focus:outline-none" onClick={handleNext}><ArrowForwardIosIcon /></button>
-                {/* <SimpleImageSlider
-                    width={690}
-                    height={470}
-                    images={slides}
-                    showBullets={true}
-                    showNavs={true}
-                    autoPlay={true} 
-                    autoPlayDelay = {3}
-                    onStartSlide = {(index, length) => {
-                        setImageNum(index);
-                    }}
-                /> */}
                 <div>
                 </div>
             </div>

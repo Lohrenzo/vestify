@@ -1,20 +1,11 @@
 import { useState, useRef } from 'react';
 
 //  link
-import { Routes, Route, NavLink, Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 // Icons
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-
-// Pages
-import Home from '../pages/Home';
-import About from '../pages/About';
-import Plans from '../pages/Plans';
-import Contact from '../pages/Contact';
-import SignUp from '../pages/SignUp';
-import Login from '../pages/Login';
-
 
 export default function Nav() {
 
@@ -39,7 +30,7 @@ export default function Nav() {
                     {open == false ? <MenuIcon sx={{ fontSize: "2.4rem"}} /> : <CloseIcon sx={{ fontSize: "2.4rem"}} />}
                 </button>
                 <div className="lg:flex hidden items-center justify-around gap-[6rem]">
-                    <ul className="relative lg:flex block lg:flex-nowrap text-[1.3rem] items-center justify-around gap-[4rem] block">
+                    <ul className="relative lg:flex block lg:flex-nowrap text-[1.3rem] items-center justify-around gap-[4rem]">
                         <NavLink to='/' title='Home' activeclass='active' className='nav-link'>
                             Home
                         </NavLink>
@@ -64,7 +55,7 @@ export default function Nav() {
             </nav>
             {open == false ? 
                 <div className="navbar opacity-0 left-[-1000px] lg:hidden grid grid-cols-1 gap-[1rem]"> 
-                    <ul className="relative block gap-[1rem] grid grid-cols-1">
+                    <ul className="relative gap-[1rem] grid grid-cols-1">
                         <NavLink to='/' title='Home' activeclass='active' className='text-left navLink'>
                             Home
                         </NavLink>
@@ -88,7 +79,7 @@ export default function Nav() {
                 </div>
                 :
                 <div className="navbar border-b border-[#028CCA] opacity-100 left-[0px] lg:hidden grid grid-cols-1 gap-[1rem]">
-                    <ul className="relative block gap-[1rem] grid grid-cols-1">
+                    <ul className="relative gap-[1rem] grid grid-cols-1">
                         <NavLink to='/' title='Home' activeclass='active' className='text-left navLink'>
                             Home
                         </NavLink>
@@ -111,16 +102,6 @@ export default function Nav() {
                     </div>
                 </div>
             }
-
-
-            <Routes>
-                <Route path='/' element={ <Home /> }></Route>
-                <Route path='/about' element={ <About /> }></Route>
-                <Route path='/plans' element={ <Plans /> }></Route>
-                <Route path='/contact-us' element={ <Contact /> }></Route>
-                <Route path='/sign-up' element={ <SignUp /> }></Route>
-                <Route path='/login' element={ <Login /> }></Route>
-            </Routes>
         </>
     );
 };

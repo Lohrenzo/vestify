@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   font-family: 'Kanit', Inter, system-ui, Cambria, Cochin, sans-serif;
   /* font-family: 'Share Tech Mono', Cambria, Cochin, monospace; */
@@ -30,6 +34,7 @@
 
 *::-webkit-scrollbar {
   width: 0.3rem;
+  height: 0;
 }
 
 /* *::-webkit-scrollbar-track-piece {
@@ -157,6 +162,7 @@ nav {
 .banner {
   height: 100vh;
   width: 100%;
+  overflow-x: hidden !important;
   align-items: center;
   justify-content: center;
 }
@@ -245,6 +251,7 @@ nav {
   transition: all ease 0.3s;
   animation: blowup 5s infinite;
 }
+
 @keyframes blowup {
   50% {
     /* transform: translateY(1rem); */
@@ -252,7 +259,100 @@ nav {
   }
 }
 
+/* Testimonials */
+.testimonials {
+  width: 100vw;
+}
+.show-active {
+  transition: all ease-in-out 0.3s;
+  display: flex;
+}
 
+
+/* Dashboard Data */
+.dashboard {
+  display: grid;
+  grid-template-columns: 18% 82%;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.dash-top {
+  background-image: linear-gradient(310deg, rgba(33, 81, 255, 0.667), rgba(33, 212, 253, 0.667)), url('/src/assets/img/dashboard-curvedbg.jpg');
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.overflow-y {
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 10px;
+  margin: 0 5px;
+  border-radius: 1rem 1rem 0 0;
+  /* height: 100%; */
+}
+
+.overflow-y::-webkit-scrollbar {
+  width: 0;
+}
+
+/* *::-webkit-scrollbar-track-piece {
+  background: transparent;
+} */
+
+.overflow-y::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 6px;
+  width: 100%;
+  height: 60px;
+  padding: 10px;
+  border-radius: 1rem;
+  margin-bottom: 15px;
+  transition: all ease 0.3s;
+  color: #000000;
+  cursor: pointer;
+}
+.sidebar-nav:hover {
+  transform: scale3d(1.02, 1.02, 1.01);
+  background: #ffffff;
+}
+
+.table-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+tr {
+  padding-bottom: 1.2rem;
+}
+
+td {
+  padding-left: 2rem;
+}
+
+.bals {
+  background: #06091D;
+  padding: 1rem 2rem;
+  color: #ffffff;
+  border-radius: 9px;
+  transition: all ease 0.3s;
+}
+
+@media screen and (min-width:320px){
+  body{
+    min-width: 100%;
+  }
+}
 
 @media screen and (max-width: 1024px) {
   body {
@@ -295,5 +395,35 @@ nav {
   .active::before {
     width: 0;
   }
+
+  .dashboard {
+    display: grid;
+    grid-template-columns: 100%;
+    overflow: hidden;
+    background: #ffffff;
+  }
+
+  .dash-nav {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50vw;
+    z-index: 3;
+  }
   
+
+  .table-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100vw;
+  }
+   
+}
+
+@media screen and (max-width: 320px) {
+  .sidebar-nav>p {
+    display: none;
+    justify-content: center !important;
+  }
 }

@@ -52,8 +52,8 @@ const handleChange = (panel) => (event, newExpanded) => {
 };
 
 return (
-    <section className="bg-[#ffffff] text-black flex flex-col justify-center items-center p-5">
-        <div className="flex justify-center items-center">
+    <section className="bg-[#ffffff] text-black flex flex-col justify-center items-center overflow-x-hidden w-[100vw] p-5">
+        <div className="flex justify-center items-center w-[100vw] overflow-x-hidden">
             <img className='lg:w-[50%] lg:inline hidden object-contain' src={img} alt="" />
             <div className='lg:w-[50%] w-[90%] mb-5 border-none outline-none'>
                 <h3 className="lg:text-left mb-[2rem] text-[2.2rem] lg:text-[2.6rem]">Frequently Asked Questions</h3>
