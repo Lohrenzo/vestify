@@ -35,28 +35,28 @@ export default function testimonials() {
     function handleNext() {
         if (index < (slides.length - 1)) {
             setIndex((prevIndex) => (prevIndex + 1));
-            console.log("Next pressed");
+            // console.log("Next pressed");
         } else {
             setIndex(slides.length - 1);
-            console.log("Next ended");
+            // console.log("Next ended");
         }
     }
 
     const handlePrevious = () => {
         if (index == 0) {
             setIndex(0);
-            console.log("Previous ended")
+            // console.log("Previous ended")
         } 
         else {
             setIndex((prevIndex) => (prevIndex - 1));
-            console.log("Previous pressed")
+            // console.log("Previous pressed")
         }
     }
 
     useEffect(() => {
         const interval = setInterval(() => {
             setIndex((prevIndex) => (prevIndex + 1) % slides.length);
-          console.log(index);
+        //   console.log(index);
         }, 3000);
 
         return () => clearInterval(interval);

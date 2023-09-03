@@ -39,7 +39,7 @@ const whyUs = [
 const WhyUs = () => {
     return (
         <section className="why-us py-[3rem]">
-            <h2 className='text-[3rem] text-center mb-5'>Why Choose Us?</h2>
+            <h2 className='lg:text-[3rem] text-[2.5rem] text-center mb-5'>Why Choose Us?</h2>
             <div className="grid grid-cols-1 lg:grid-cols-3 mx-[6%] lg:mx-[12%] px-5 gap-[25px]">
                 {whyUs.map((why, index) => {
                     const {icon, name, description} = why;

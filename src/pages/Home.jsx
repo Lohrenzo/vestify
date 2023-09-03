@@ -32,8 +32,8 @@ export default function Home() {
         <div className=''>
             <Nav />
             <section className='banner home-banner flex'>
-                <div className="grid px-5 grid-cols-1 lg:grid-cols-1 items-center">
-                    <div className='lg:text-left text-center lg:w-[50%] w-[100%] text-[3.2rem]'>
+                <div className="grid px-5 lg:pt-0 pt-[80px] grid-cols-1 lg:grid-cols-1 items-center">
+                    <div className='lg:text-left text-center lg:w-[50%] w-[100%] text-[2.7rem] lg:text-[3.2rem]'>
                         <h2 className='mb-5'>Creating wealth through trading assets online.</h2>
                         <p className='lg:text-[1rem] text-[1.2rem]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam voluptatibus consectetur iste esse vero non quaerat, quisquam libero, voluptatum odit tenetur.</p>
                     </div>
